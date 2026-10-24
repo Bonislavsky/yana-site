@@ -16,8 +16,9 @@ import {
   Info,
   ShieldAlert
 } from 'lucide-react';
-import { soundEngine } from '../utils/audioEngine';
+import { IMAGES } from '../assets/siteImages';
 import { SoundCondition } from '../types';
+import { soundEngine } from '../utils/audioEngine';
 
 export const PsychoacousticsView: React.FC = () => {
   const [activeSoundEnv, setActiveSoundEnv] = useState<SoundCondition['id']>('silence');
@@ -299,7 +300,7 @@ export const PsychoacousticsView: React.FC = () => {
           {/* Scientific Illustration */}
           <div className="rounded-xl overflow-hidden border border-slate-800 shadow-lg bg-slate-950">
             <img
-              src="/src/assets/images/auditory_attention_brain_1792863214387.jpg"
+              src={IMAGES.auditoryAttentionBrain}
               alt="Слухове сприйняття та увага"
               referrerPolicy="no-referrer"
               className="w-full h-56 object-cover object-center"
