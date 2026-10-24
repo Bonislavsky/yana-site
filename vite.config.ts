@@ -5,7 +5,10 @@ import {defineConfig} from 'vite';
 
 export default defineConfig(() => {
   return {
-    base: process.env.VITE_BASE || '/',
+    // This repository is published at https://<owner>.github.io/yana-site/.
+    // Keep local production builds aligned with GitHub Pages when VITE_BASE
+    // is not supplied; the deployment workflow can still override this value.
+    base: process.env.VITE_BASE || '/yana-site/',
     plugins: [react(), tailwindcss()],
     resolve: {
       alias: {
